@@ -1,0 +1,8 @@
+.carddiv{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .rescard{
+    border: 2px solid red;
+  }

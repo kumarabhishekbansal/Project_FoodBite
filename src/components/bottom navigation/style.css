@@ -1,0 +1,9 @@
+
+.bnav{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    width:50%;
+  }
+ 
