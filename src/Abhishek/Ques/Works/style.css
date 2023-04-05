@@ -21,6 +21,11 @@
     width: 20rem;
 }
 
+.cardwork:hover{
+    transform: scale(1.1,1.1);
+    font-size: 4rem;
+}
+
 @media screen and (max-width: 800px) {
     .cardwork{
         border:2px solid red;

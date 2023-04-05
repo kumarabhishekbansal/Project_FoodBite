@@ -2,7 +2,8 @@ import React from "react";
 import "./sidebarstyle.css";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
-import img1 from '../static/images/home3d_1.jpg';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import Mobile from "./Mobile Design/Mobile";
 const SideBar = () => {
   return (
     <>
@@ -14,14 +15,18 @@ const SideBar = () => {
             all-new FoodBite ..
           </p>
           <Button className="exp p-5">
-            <Link to="/menu" className="expbtn">Explore More...</Link>
+            <Link to="/menu" className="expbtn">View Menu 
+            <KeyboardDoubleArrowUpIcon className="upperarrow" />
+            </Link>
+            
         </Button>
         </div>
+        
         <hr />
 
         <div className="imgsidebar">
           <figure>
-            <img src={img1} alt="" className="imgphn" />
+            <Mobile />
           </figure>
         </div>
       </div>

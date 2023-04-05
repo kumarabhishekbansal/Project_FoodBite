@@ -1,6 +1,6 @@
 .homesidebar{
     font-size: 2rem;
-    min-height: 100vh;
+    min-height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +24,12 @@
       border-radius: 10rem;
       font-size: 1.5rem;
     }
+
+.exparrow{
+  display: flex;
+  flex-direction: column;
+}
+   
     
 
 .textsidebar{

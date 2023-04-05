@@ -5,7 +5,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Home from "./Abhishek/Home/Home";
 import { Routes, Route} from "react-router-dom";
 import ViewMenu from "./Abhishek/ViewMenu/ViewMenu";
-import Footer from "./Abhishek/Navigation/Footer/Footer";
 import Bnavbar from "./Abhishek/bottom navigation/Bnavbar";
 import Navigation from "./Abhishek/Navigation/Top/Navigation";
 import Login from "./BikramJeet/com/Login";
@@ -25,6 +24,7 @@ const App = () => {
       </Routes>
       <Footers />
       <Bnavbar />
+      
     </>
   );
 };
