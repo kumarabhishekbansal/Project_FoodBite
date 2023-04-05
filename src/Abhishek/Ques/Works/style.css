@@ -1,0 +1,35 @@
+.Workhead{
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.workpara{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem; 
+}
+
+.cardswork{
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.cardwork{
+    border:2px solid orange;
+    margin: 2rem;
+    width: 20rem;
+}
+
+@media screen and (max-width: 800px) {
+    .cardwork{
+        border:2px solid red;
+        margin: 2rem;
+        width: 10rem;
+    }
+    .cardswork{
+        display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+  }  

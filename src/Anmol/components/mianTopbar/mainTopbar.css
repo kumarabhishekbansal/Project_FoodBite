@@ -1,0 +1,17 @@
+.maintopbar{
+    height: 5.5rem;
+    display: flex;
+    border-bottom: 2px solid #dcd8d8;
+    align-items: center;
+    justify-content: space-between;
+}
+.maintopbar h1{
+    margin: 0;
+    margin-left: 7rem;
+    font-size: 2.5em;
+}
+.maintopbar img{
+    margin-right: 10rem;
+    height: 5rem;
+    width: 12rem;
+}

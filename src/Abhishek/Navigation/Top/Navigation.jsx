@@ -1,0 +1,111 @@
+import React, { useState } from "react";
+import './style.css'
+import { Link } from "react-router-dom";
+import logo from "../images/mainLogo.png";
+import {
+  MDBContainer,
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarToggler,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
+  MDBCollapse,
+} from "mdb-react-ui-kit";
+import { Divider } from "@mui/material";
+const Navigation = () => {
+  const [showNavCentred, setShowNavCentred] = useState(false);
+  return (
+    <>
+      <MDBNavbar expand="lg" light bgColor="light" className="fixed-top navi mb-5">
+        <MDBContainer fluid>
+          <MDBNavbarBrand>
+          <Link to='/'>
+          <img src={logo} height="60" alt="" loading="lazy" />
+          </Link>
+            
+          </MDBNavbarBrand>
+
+          <MDBNavbarToggler
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            onClick={() => setShowNavCentred(!showNavCentred)}
+          >
+            <MDBIcon icon="bars" fas />
+          </MDBNavbarToggler>
+
+          <MDBCollapse navbar show={showNavCentred} center id='navbarCenteredExample'>
+            <MDBNavbarNav fullWidth={false} className="mb-2 mb-lg-0">
+              <MDBNavbarItem className="navitem">
+                <MDBNavbarLink active aria-current="page">
+                <Link to='/'>Home</Link>
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+
+              <MDBNavbarItem className="navitem">
+                <MDBNavbarLink>
+                <Link to='/about'>
+                About Us
+                </Link>
+                
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+
+              <MDBNavbarItem className="navitem">
+                <MDBNavbarLink to="/faq"> <Link to='/faq'>FAQ's</Link></MDBNavbarLink>
+              </MDBNavbarItem>
+
+              <MDBNavbarItem className="navitem">
+                <MDBNavbarLink to="/contact"> <Link to='/contact'>Contact US</Link></MDBNavbarLink>
+              </MDBNavbarItem>
+
+              <MDBNavbarItem className="navitem">
+                <MDBNavbarLink to="/register"><Link to='/register'>Register</Link></MDBNavbarLink>
+              </MDBNavbarItem>
+
+              <MDBNavbarItem className="navitem">
+                <MDBNavbarLink to="/login"><Link to='/login'>Login</Link></MDBNavbarLink>
+              </MDBNavbarItem>
+
+              <MDBNavbarItem className="navitem">
+                <MDBDropdown>
+                  <MDBDropdownToggle tag="a" className="nav-link" role="button">
+                    Services
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem link> <Link to='/'>Add Resturants</Link> </MDBDropdownItem>
+                    <MDBDropdownItem link> <Link to='/'>Add Tiffin Service</Link></MDBDropdownItem>
+                    <MDBDropdownItem link><Link to='/'>Friend Sent</Link></MDBDropdownItem>
+                    <MDBDropdownItem link><Link to='/'>Friends List</Link></MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </MDBNavbarItem>
+
+              <MDBNavbarItem className="navitem">
+                <MDBDropdown>
+                  <MDBDropdownToggle tag="a" className="nav-link" role="button">
+                    Profile
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem link>Dashboard</MDBDropdownItem>
+                    <MDBDropdownItem link>Wallet</MDBDropdownItem>
+                    <MDBDropdownItem link>Logout</MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </MDBNavbarItem>
+            </MDBNavbarNav>
+          </MDBCollapse>
+        </MDBContainer>
+      </MDBNavbar>
+      <Divider />
+    </>
+  );
+};
+
+export default Navigation;
