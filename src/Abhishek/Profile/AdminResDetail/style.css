@@ -1,0 +1,58 @@
+.admin_res_parent{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* border: 2px solid red; */
+    margin:10rem 0rem;
+    background-color: goldenrod;
+    /* background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%); */
+}
+.main_div_admin_res{
+    display: flex;
+    /* border: 2px solid green; */
+    justify-content:space-around;
+    align-items: center;
+    margin:5rem 5rem;
+}
+.partition_admin_res1{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    /* border: 3px solid orange; */
+}
+.other_info{
+    display: flex;
+    flex-direction: column;
+}
+.partition_admin_res2{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    /* border: 3px solid yellow; */
+    justify-content: space-evenly;
+    min-height: 30rem;
+}
+.info1{
+    display: flex;
+    justify-content: space-between;
+
+}
+.div_for_image{
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 80%;
+
+}
+.image{
+    height: 100%;
+    width: 80%; 
+}
+
+.aplbtn{
+    width: 25%;
+    padding: 1rem;
+}
+.other_info{
+    /* border: 2px solid red; */
+    margin-top: 5rem;
+}

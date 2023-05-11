@@ -4,9 +4,6 @@ import { Divider } from '@mui/material'
 const Mobile = () => {
   return (
     <>
-
-        
-
         <div className="main_mobile_div my-5">
             <div className="div_top">
                    <div className="div_1">

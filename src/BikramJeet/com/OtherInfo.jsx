@@ -5,26 +5,38 @@ function OtherInfo({ formData, setFormData }) {
     <div className="other-info-container">
       <input
         type="text"
-        placeholder="Address..."
-        value={formData.Address}
+        placeholder="Street..."
+        name="street"
+        value={formData.street}
         onChange={(e) => {
-          setFormData({ ...formData, Address: e.target.value });
+          setFormData({ ...formData, street: e.target.value });
         }}
       />
       <input
         type="text"
         placeholder="State..."
-        value={formData.State}
+        name="state"
+        value={formData.state}
         onChange={(e) => {
-          setFormData({ ...formData, State: e.target.value });
+          setFormData({ ...formData, state: e.target.value });
         }}
       />
       <input
         type="text"
         placeholder="City..."
-        value={formData.City}
+        name="city"
+        value={formData.city}
         onChange={(e) => {
-          setFormData({ ...formData, City: e.target.value });
+          setFormData({ ...formData, city: e.target.value });
+        }}
+      />
+        <input
+        type="text"
+        placeholder="Zip Code..."
+        name="zipcode"
+        value={formData.zipcode}
+        onChange={(e) => {
+          setFormData({ ...formData, zipcode: e.target.value });
         }}
       />
 

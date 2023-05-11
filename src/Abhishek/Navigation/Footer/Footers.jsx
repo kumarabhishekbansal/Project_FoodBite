@@ -40,7 +40,7 @@ const Footers=()=>{
                 <div className="div3">
                 <h2>Services</h2>
                     <div className="link_foots">
-                        <Link to='/'>Add Resturant</Link>
+                        <Link to='/profile'>Add Resturant</Link>
                     </div>   
 
                     <div className="link_foots">

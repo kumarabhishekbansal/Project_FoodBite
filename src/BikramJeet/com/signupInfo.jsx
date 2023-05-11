@@ -1,26 +1,23 @@
 import React from "react";
 import { useState } from "react";
 import PWDReq from "./PWDReq";
-import {Icon} from 'react-icons-kit';
-import {eye} from 'react-icons-kit/feather/eye'
-import {eyeOff} from 'react-icons-kit/feather/eyeOff'
-
+import { Icon } from "react-icons-kit";
+import { eye } from "react-icons-kit/feather/eye";
+import { eyeOff } from "react-icons-kit/feather/eyeOff";
 
 function SignUpInfo({ formData, setFormData }) {
- 
-  const [type, setType]=useState('password');
-  const [icon, setIcon]=useState(eyeOff);
+  const [type, setType] = useState("password");
+  const [icon, setIcon] = useState(eyeOff);
 
-  const handleToggle=()=>{    
-    if(type==='password'){
-      setIcon(eye);      
-      setType('text');
+  const handleToggle = () => {
+    if (type === "password") {
+      setIcon(eye);
+      setType("text");
+    } else {
+      setIcon(eyeOff);
+      setType("password");
     }
-    else{
-      setIcon(eyeOff);     
-      setType('password');
-    }
-  }
+  };
 
   const [password, setPassword] = useState("");
   const [pwdRequiste, setPWDRquisite] = useState(false);
@@ -61,17 +58,19 @@ function SignUpInfo({ formData, setFormData }) {
     <div className="sign-up-container">
       <input
         required
-        type="text"
+        type="email"
+        name="email"
         placeholder="Email..."
         value={formData.email}
         onChange={(event) =>
           setFormData({ ...formData, email: event.target.value })
         }
       />
-      
+
       <input
         type={type}
         placeholder="Password..."
+        name="password"
         value={formData.password}
         className="pass"
         onFocus={handleOnFocus}
@@ -82,29 +81,32 @@ function SignUpInfo({ formData, setFormData }) {
         }
         required
       />
-      <span onClick={handleToggle} className="toggle"><Icon icon={icon} size={20} /></span>
-      
+      <span onClick={handleToggle} className="toggle">
+        <Icon icon={icon} size={20} />
+      </span>
+
       {pwdRequiste ? (
-                      <PWDReq
-                          capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
-                          numberFlag={checks.numberCheck ? "valid" : "invalid"}
-                          pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
-                          specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
-                      />
-                      ) : null}
-      
-      
+        <PWDReq
+          capsLetterFlag={checks.capsLetterCheck ? "valid" : "invalid"}
+          numberFlag={checks.numberCheck ? "valid" : "invalid"}
+          pwdLengthFlag={checks.pwdLengthCheck ? "valid" : "invalid"}
+          specialCharFlag={checks.specialCharCheck ? "valid" : "invalid"}
+        />
+      ) : null}
+
       <input
         type={type}
         placeholder="Confirm Password..."
-        value={formData.confirmPassword}
+        name="confirmpassword"
+        value={formData.confirmpassword}
         className="pass"
         onChange={(event) =>
-          setFormData({ ...formData, confirmPassword: event.target.value })
+          setFormData({ ...formData, confirmpassword: event.target.value })
         }
       />
-      <span onClick={handleToggle} className="toggle"><Icon icon={icon} size={20} /></span>
-      
+      <span onClick={handleToggle} className="toggle">
+        <Icon icon={icon} size={20} />
+      </span>
     </div>
   );
 }

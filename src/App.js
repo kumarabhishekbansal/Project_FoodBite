@@ -1,4 +1,6 @@
 import React from "react";
+import "./App.css"
+
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -11,6 +13,11 @@ import Login from "./BikramJeet/com/Login";
 import Form from "./BikramJeet/com/Form";
 import Mainpage from "./Anmol/components/mainPage/Mainpage"
 import Footers from "./Abhishek/Navigation/Footer/Footers";
+import Dashboard from "./Abhishek/Profile/DashBoard/DashBoard";
+import ViewAdminRes from "./Abhishek/Profile/AddRestuarant/ViewAdminRes";
+import AdminResDetail from "./Abhishek/Profile/AdminResDetail/AdminResDetail";
+import ViewClientRes from "./Abhishek/Profile/AddRestuarant/ViewClientRes";
+import Cart from "./Abhishek/Profile/ViewMenuRes/Cart";
 const App = () => {
   return (
     <>
@@ -21,6 +28,11 @@ const App = () => {
         <Route exact path="/login" element={<Login />}/>
         <Route exact path="/register" element={<Form />}/>
         <Route exact path="/payment" element={<Mainpage />}/>
+        <Route exact path="/profile" element={<Dashboard />}/>
+        <Route exact path="/viewadminres" element={<ViewAdminRes />}/>
+        <Route exact path="/viewres/:val" element={<AdminResDetail />}/>
+        <Route exact path="/viewres" element={<ViewClientRes />}/>
+        <Route exact path="/cart" element={<Cart />}/>
       </Routes>
       <Footers />
       <Bnavbar />

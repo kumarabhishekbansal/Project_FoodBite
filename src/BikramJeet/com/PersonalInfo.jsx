@@ -7,37 +7,40 @@ function PersonalInfo({ formData, setFormData }) {
       <input
         type="text"
         placeholder="Name..."
-        value={formData.firstName}
+        name="fullName"
+        value={formData.fullName}
         onChange={(e) => {
-          setFormData({ ...formData, Name: e.target.value });
+          setFormData({ ...formData, fullName: e.target.value });
         }}
       />
       <input
         type="text"
         placeholder="User Name..."
-        value={formData.lastName}
+        name="username"
+        value={formData.username}
         onChange={(e) => {
-          setFormData({ ...formData, userName: e.target.value });
+          setFormData({ ...formData, username: e.target.value });
         }}
       />
       <input
         type="text"
         placeholder="Date Of Birth..."
-        value={formData.Dob}
+        value={formData.dob}
         onFocus={(e) => (e.target.type = "date")}
         onBlur={(e) => (e.target.type = "text")}
-
+        name="dob"
         onChange={(e) => {
-          setFormData({ ...formData, Dob: e.target.value });
+          setFormData({ ...formData, dob: e.target.value });
         }}
       />
       <input
         type="number"
         max={10}
         placeholder="Contact..."
-        value={formData.username}
+        name="phone"
+        value={formData.phone}
         onChange={(e) => {
-          setFormData({ ...formData, contact: e.target.value });
+          setFormData({ ...formData, phone: e.target.value });
         }}
       />
     </div>

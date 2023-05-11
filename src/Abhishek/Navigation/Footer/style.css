@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Oswald&display=swap');
 .main_footer_div{
+    font-size: 1.8rem;
     position: relative;
-    bottom: 0;
+    bottom: 0; 
     background-color: black;
     display: flex;
     flex-direction: column;
     height: 100%;
     color: white;
+    /* border: 5px solid red; */
 }
 
 .sec_foot1{

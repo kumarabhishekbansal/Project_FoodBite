@@ -1,11 +1,18 @@
 .homesidebar{
-    font-size: 2rem;
-    min-height: 20vh;
+  width: 75%;
+    font-size: 3rem;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom:0rem ;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #E7B10A;
+    padding: 4rem;
+    border-radius: 5rem;
+    box-shadow: 0px 9px 30px rgba(255, 149, 5, 0.3);
+    box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
 }
 
 /* .exp{
@@ -18,11 +25,11 @@
 .expbtn{
       text-decoration: none;
       background-color: rgb(198, 255, 196);
-      font-size: 1rem;
+      font-size: 5rem;
       width: 20rem;
+      height: 20rem;
       cursor: pointer;
-      border-radius: 10rem;
-      font-size: 1.5rem;
+      border-radius: 2rem;
     }
 
 .exparrow{

@@ -1,5 +1,10 @@
 .navitem{
-    padding-left: 5rem;
+    padding-left: 12rem;
+    font-size: 1.5rem;
+}
+
+.navitemd{
+  font-size: 2rem;
 }
 
 .navi{

@@ -1,12 +1,20 @@
 import React from "react";
 import Card from "@mui/material/Card";
-
+import { Link } from "react-router-dom";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+import { SendToMobile } from "@mui/icons-material";
 import { Divider } from "@mui/material";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
+import HomeIcon from '@mui/icons-material/Home';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { MDBCardText,
+MDBBtn
+} from "mdb-react-ui-kit";
 import "./style.css";
+import { color } from "@cloudinary/url-gen/qualifiers/background";
 const Work = () => {
   return (
     <>
@@ -19,18 +27,19 @@ const Work = () => {
 
       <Card className="cardwork">
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h2" component="div">
             Step 1
           </Typography>
           <Divider />
-          <Typography variant="body2" color="text.secondary">
+          <MDBCardText color="text.secondary" className="carddesbody">
             Create Your account with FoodBite
-          </Typography>
+          </MDBCardText>
           <Divider />
         </CardContent>
         <CardActions>
-          <Button size="small">Register</Button>
-          <Button size="small">Login</Button>
+        <Link to='/register'><Button variant="contained" endIcon={<SendToMobile />} color="primary">Register</Button></Link>
+        <Link to='/login'><Button variant="contained" endIcon={<SendToMobile />} color="secondary">Login</Button></Link>
+        
         </CardActions>
       </Card>
 
@@ -42,18 +51,18 @@ const Work = () => {
 
       <Card  className="cardwork">
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h2" component="div">
             Step 2
           </Typography>
           <Divider />
-          <Typography variant="body2" color="text.secondary">
+          <MDBCardText  color="text.secondary" className="carddesbody">
             View Your Resturant and add order in your cart
-          </Typography>
+          </MDBCardText>
           <Divider />
         </CardContent>
         <CardActions>
-          <Button size="small">Home</Button>
-          <Button size="small">Cart</Button>
+        <Link to='/'><Button variant="contained" endIcon={<HomeIcon />} color="success">Home</Button></Link>
+        <Link to='/cart'><Button variant="contained" endIcon={<ShoppingCartIcon />} color="warning">Cart</Button></Link>
         </CardActions>
       </Card>
 
@@ -62,17 +71,17 @@ const Work = () => {
     
 <Card  className="cardwork">
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h2" component="div">
             Step 3
           </Typography>
           <Divider />
-          <Typography variant="body2" color="text.secondary">
+          <MDBCardText  color="text.secondary" className="carddesbody">
             Done your payment via online transactions or you can use your wallet with amazing offers and cashback points.
-          </Typography>
+          </MDBCardText>
           <Divider />
         </CardContent>
         <CardActions>
-          <Button size="small">Cart</Button>
+        <Link to='/cart'><Button variant="contained" endIcon={<ShoppingCartIcon />} color="warning">Cart</Button></Link>
         </CardActions>
       </Card>
 
@@ -84,17 +93,18 @@ const Work = () => {
 
       <Card  className="cardwork">
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h2" component="div">
             Step 4
           </Typography>
           <Divider />
-          <Typography variant="body2" color="text.secondary">
+          <MDBCardText  color="text.secondary" className="carddesbody">
             Get your order at your home with 5 star rating delivery Person
-          </Typography>
+          </MDBCardText>
           <Divider />
         </CardContent>
         <CardActions>
-          <Button size="small">View Menu</Button>
+        
+        <Link to='/menu'><Button variant="contained" endIcon={<RestaurantMenuIcon />} color="success">Menu</Button></Link>
           
         </CardActions>
       </Card>

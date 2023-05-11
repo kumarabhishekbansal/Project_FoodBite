@@ -1,0 +1,45 @@
+.cards_div{
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid red;
+    font-size: 2rem;
+}
+.main_card{
+    margin:10rem 3rem;
+    width: 30rem;
+    height: 50rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.hc_div{
+    margin-top: 20rem;
+    border: 2px solid red;
+    margin: auto;
+    text-align: center;
+    /* height: 100vh; */
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.hc{
+    margin: 10rem 0rem;
+    padding: 3rem;
+    width: 100vw;
+    /* border: 2px solid red; */
+    text-align: center;
+    font-size: 3rem;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.hc_btn{
+    padding: 2rem;
+    font-size: 2rem;
+}
+.other_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border:2px solid red; */
+    height: 10rem;
+    padding: 5rem;
+}
+.readmbtn{
+    margin-top: 2rem;
+}
