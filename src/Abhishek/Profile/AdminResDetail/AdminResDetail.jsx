@@ -36,16 +36,22 @@ const AdminResDetail = () => {
       <div className="admin_res_parent">
         <div className="main_div_admin_res">
           <div className="partition_admin_res1">
-            <div className="div_for_image"></div>
-                <figure>
+            <div className="div_for_image" style={{backgroundImage:`url(${usedval.profile})`}}>
+                {/* <figure>
                     <img src={usedval.profile} alt="img" className="image" />
-                </figure>
+                </figure> */}
+            </div>
             <div className="other_info">
-            {usedval.isvacancies?(<h3 className="text-warning p-4"> vacancies : Yes </h3>):(<h3> vacancies : No </h3>)}  
+            {usedval.isvacancies?(<h3 className="text-warning p-4"> vacancies : Yes </h3>):(<h3 className="text-danger"> vacancies : No </h3>)}  
             {user.isAdmin?(<>
 
             </>):(<>
-                <button className={`${usedval.isvacancies?'btn-info':'btn-danger'} aplbtn p-4`}>Apply</button>
+            {usedval.isvacancies?(<>
+              <button className="btn-primary p-4">Apply</button>
+            </>):(<>
+              <button className="btn-danger p-4" hidden>Apply</button>
+            </>)}
+                
             </>)}
                     
                     <h3 className="p-4"> openHours : {usedval.openHours} </h3>
@@ -54,23 +60,25 @@ const AdminResDetail = () => {
           </div>
         <hr />
           <div className="partition_admin_res2">
-            <div className="info1">
+            <div className="info2">
                 <h3>Name : {usedval.trademark} </h3>
+            </div>
+            <div className="info2">
                 <h3>Phone : {usedval.phone}</h3>
             </div>
             <div className="info2">
                 <h3>Descritption : {usedval.description}</h3>
             </div>
-            <div className="info3">
+            <div className="info2">
             <h3>Address : {usedval.address}</h3>
             </div>
-            <div className="info4">
+            <div className="info2">
                 <h3>City : {usedval.city}</h3>
             </div>
-            <div className="info5">
+            <div className="info2">
                 <h3>Email : {usedval.email}</h3>
             </div>
-            <div className="info6">
+            <div className="info2">
             {user.isAdmin?(<>
                 <button className="btn-primary btn-lg" onClick={handleadditem}>Add Item</button>
                 <button className="btn-warning btn-lg m-4" onClick={handleviewmenu}>Update Restuarant</button>

@@ -143,8 +143,7 @@ const ViewAdminRes = () => {
                           to={`/viewres/${encodeURIComponent(
                             JSON.stringify(val)
                           )}`}
-                          style={{ color: "white"}}
-                          
+                          style={{ color: "white" }}
                         >
                           Read More
                         </Link>
@@ -158,9 +157,16 @@ const ViewAdminRes = () => {
         </>
       ) : (
         <>
-          <div className="hc_div">
-            <h1 className="hc">Nothing to show or try again to below button</h1>
-            <button onClick={handlenavi} className="hc_btn">View Restuarant</button>
+          <div className="container_empty_res">
+            <h1 className="empty_res_h1">Nothing to Show</h1>
+            <p className="empty_res_p">
+              Sorry, there is nothing to show here Or you can try to click on
+              below button
+            </p>
+
+            <button onClick={handlenavi} className="hc_btn">
+              View Restuarant
+            </button>
           </div>
         </>
       )}

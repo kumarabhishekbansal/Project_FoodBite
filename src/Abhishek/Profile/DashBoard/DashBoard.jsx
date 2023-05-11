@@ -61,10 +61,9 @@ const Dashboard = () => {
 // }
 
   const checkpaysuccess=async()=>{
-    if(queryParams.session_id)
+    if(queryParams.session_id && user)
     {
         const API_URL='/api/cart/'
-        // console.log(API_URL," ",queryParams.session_id);
         const data={cart:cart,userId:user._id}
         const response=await axios.post(API_URL+'addcartitems',data);
         console.log(response);
@@ -80,14 +79,14 @@ const Dashboard = () => {
           points:actualpoint+addpoint-removepoint
         }
         dispatch(addcashbackpoints(pointdata));
-        // dispatch(getuser(user._id));
-        // getuser();
         navigate("/profile");
     }
-    dispatch(getuser(user._id));
+    // dispatch(getuser(user._id));
   }
 
-
+useEffect(()=>{
+  dispatch(getuser(user._id));
+},[]);
 
   useEffect(() => {
     if (isError) {
@@ -96,20 +95,16 @@ const Dashboard = () => {
         dispatch(reset());
       }, 2000);
     } else if (isSuccess || isAdmin) {
-      // console.log("admin success");
       setTimeout(() => {
-        dispatch(getuser(user._id));
+        navigate("/profile");
         dispatch(reset());
       }, 2000);
-    } else {
-      dispatch(reset());
     }
-  }, [dispatch, isAdmin, message, isSuccess, isError,user]);
+  }, [isAdmin, message, isSuccess, isError]);
 
 useEffect(()=>{
-  dispatch(getuser(user._id));
   checkpaysuccess();
-},[user]);
+},[]);
 
   if (!user) {
     return navigate("/register");
@@ -303,7 +298,9 @@ useEffect(()=>{
                 {(user.isAdmin?(<>
                   <MDBRow>
                   <MDBCol sm="12">
-                  <button className="btn btn-primary" onClick={handleview}>
+                  <button className="btn btn-primary" onClick={handleview}
+                  style={{backgroundColor:"blue"}}
+                  >
                       View Restuarnats
                   </button>
                   </MDBCol>
@@ -311,13 +308,23 @@ useEffect(()=>{
                 </>):(<>
                   <MDBRow>
                   <MDBCol sm="12">
-                  <button className="btn btn-primary" onClick={handleclientview}>
+                  <button className="btn btn-primary" onClick={handleclientview}
+                  style={{backgroundColor:"blue"}}
+                  >
                       View Restuarnats
                   </button>
                   </MDBCol>
                 </MDBRow>
                 </>))}
-                
+                <MDBRow>
+                  <MDBCol sm="12" >
+                  <button className="btn btn-primary"  style={{backgroundColor:"green"}}
+                  onClick={()=>navigate("/historyorders")}
+                  >
+                      View Orders
+                  </button>
+                  </MDBCol>
+                </MDBRow>
 
               </MDBCardBody>
             </MDBCard>

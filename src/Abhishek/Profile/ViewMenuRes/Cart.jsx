@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import EmptyCart from "../../../Anmol/components/Empty/EmptyCart";
 import "./ViewMenuRes.css";
 import {
   getCartTotal,
@@ -84,6 +85,11 @@ const Cart = () => {
   //     // window.location.href = response?.data?.url;
   //   }
   // }, [isSuccess]);
+
+  if(cart.length===0)
+  {
+      return <EmptyCart />
+  }
 
   return (
     <div className="cart_div">
@@ -221,7 +227,7 @@ const Cart = () => {
                     value={amountpay}
                     className="inpt1"
                      />
-                      <label className="form-label" for="form1">
+                      <label className="form-label amp" for="form1">
                       Amount to be paid
                     </label>
                   </form>

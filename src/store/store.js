@@ -4,7 +4,7 @@ import AddResReducer from "../Reducers/Dashboard/AddResSlice"
 import AddResModalReducer from '../Reducers/Modal/AddResModalSlice'
 import ItemReducer from '../Reducers/Items/ItemSlice'
 import CartReducer from "../Reducers/Cart/CartSlice"
-// import PaymentService from '../Reducers/Payment/PaymentService'
+import OrderReducer from "../Reducers/orders/OrderSlice"
 export const store = configureStore({
   reducer: {
     auth: AuthReducer,
@@ -12,6 +12,7 @@ export const store = configureStore({
     addresmodal:AddResModalReducer,
     itemreducer:ItemReducer,
     cart:CartReducer,
+    orders:OrderReducer,
     // [PaymentService.reducerPath]: PaymentService.reducer,
   },
   // middleware: (getDefaultMiddleware) =>

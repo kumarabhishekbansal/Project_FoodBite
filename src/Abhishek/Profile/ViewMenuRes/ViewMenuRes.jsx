@@ -178,9 +178,14 @@ const ViewMenuRes = (props) => {
               </>
             ) : (
               <>
-                <h1>Noodle section is empty!!</h1>
+              <div className="food_heading">
+              <h2>Noodle section is empty!!</h2>
+              </div>
                 
-                <button onClick={handleload}>click to Load...</button>
+                <div className="cookdiv">
+                <CookingLoader />
+                </div>
+                <button onClick={handleload} className="loadbtn">click to Load...</button>
               </>
             )}
 
@@ -203,8 +208,14 @@ const ViewMenuRes = (props) => {
               </>
             ) : (
               <>
-                <h1>Burger section is empty!!</h1>
-                <button onClick={handleload}>click to Load...</button>
+              <div className="food_heading">
+              <h2>Burger section is empty!!</h2>
+              </div>
+                
+                <div className="cookdiv">
+                <CookingLoader />
+                </div>
+                <button onClick={handleload} className="loadbtn">click to Load...</button>
               </>
             )}
 
@@ -227,8 +238,14 @@ const ViewMenuRes = (props) => {
               </>
             ) : (
               <>
-                <h1>Pizza section is empty!!</h1>
-                <button onClick={handleload}>click to Load...</button>
+              <div className="food_heading">
+              <h2>Pizza section is empty!!</h2>
+              </div>
+                
+                <div className="cookdiv">
+                <CookingLoader />
+                </div>
+                <button onClick={handleload} className="loadbtn">click to Load...</button>
               </>
             )}
 
@@ -251,12 +268,14 @@ const ViewMenuRes = (props) => {
               </>
             ) : (
               <>
-                <h1>Subway section is empty!!</h1>
+              <div className="food_heading">
+              <h2>Subway section is empty!!</h2>
+              </div>
+                
                 <div className="cookdiv">
                 <CookingLoader />
                 </div>
-                
-                <button onClick={handleload}>click to Load...</button>
+                <button onClick={handleload} className="loadbtn">click to Load...</button>
               </>
             )}
 
@@ -279,18 +298,28 @@ const ViewMenuRes = (props) => {
               </>
             ) : (
               <>
-                <h1>Garlic Bread section is empty!!</h1>
-                <button onClick={handleload}>click to Load...</button>
+              <div className="food_heading">
+              <h2>Garlic section is empty!!</h2>
+              </div>
+                
+                <div className="cookdiv">
+                <CookingLoader />
+                </div>
+                <button onClick={handleload} className="loadbtn">click to Load...</button>
               </>
             )}
           </>
         ) : (
           <>
             {/* <h1>Menu is empty!!!</h1> */}
-            <div className="cookdiv">
+            <div className="food_heading">
+              <h2>Menu is Empty!!</h2>
+              </div>
+                
+                <div className="cookdiv">
                 <CookingLoader />
                 </div>
-            <button onClick={handleload}>click to Load...</button>
+                <button onClick={handleload} className="loadbtn">click to Load...</button>
           </>
         )}
       </div>

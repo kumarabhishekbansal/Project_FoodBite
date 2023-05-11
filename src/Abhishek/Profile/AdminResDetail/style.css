@@ -2,9 +2,15 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* border: 2px solid red; */
-    margin:10rem 0rem;
-    background-color: goldenrod;
+    border: 2px solid red;
+    margin:10rem 6rem;
+    border-radius: 10rem;
+    background-image: url("./Images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility:visible;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    /* background-color: goldenrod; */
     /* background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%); */
 }
 .main_div_admin_res{
@@ -15,32 +21,47 @@
     margin:5rem 5rem;
 }
 .partition_admin_res1{
-    flex: 4;
+    font-size: 4rem;
+    flex: 2;
     display: flex;
     flex-direction: column;
     /* border: 3px solid orange; */
+    justify-content: center;
+    text-align: center;
 }
 .other_info{
+    /* border: 3px solid red;; */
+    color: white;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    height: 30rem;
+    justify-content: center;
+}
+
+.other_info h3{
+    font-size: 4rem;
+    padding: 2rem;
 }
 .partition_admin_res2{
-    flex: 3;
+    flex: 2;
     display: flex;
     flex-direction: column;
     /* border: 3px solid yellow; */
     justify-content: space-evenly;
     min-height: 30rem;
+    text-align: center;
 }
 .info1{
     display: flex;
-    justify-content: space-between;
 
 }
 .div_for_image{
+    text-align: center;
     /* border: 2px solid black; */
-    height: 100%;
-    width: 80%;
+    height: 30rem;
+    width: 100%;
+    border-radius: 5rem;
 
 }
 .image{
@@ -55,4 +76,34 @@
 .other_info{
     /* border: 2px solid red; */
     margin-top: 5rem;
+}
+
+.info2{
+    margin: 0rem 4rem;
+}
+
+.info2 h3{
+    font-size: 3rem;
+    padding: 2rem;
+}
+.info2 button{
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+/* add item modal */
+
+.modal_content{
+    font-size: 2rem;
+}
+.modal_title{
+    font-size: 2rem;
+}
+.modal_inpt{
+    font-size: 2rem;
+}
+.modal_check{
+    border: 3px solid black;
+    width: 2rem;
+    height: 2rem;
 }

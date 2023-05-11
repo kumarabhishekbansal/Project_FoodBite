@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { offadditembtn } from "../../../Reducers/Dashboard/AddResSlice";
 import si1 from "../images/resback.jpg";
-import convertToBase64 from "../../../BikramJeet/com/helper/convert";
 import { ToastContainer, toast } from "react-toastify";
 import { reset, additem } from "../../../Reducers/Items/ItemSlice";
 import "react-toastify/dist/ReactToastify.css";
-import Noodles from "../NoodleSection/Noodles";
+import "./style.css";
+import { Typography } from "@mui/material";
 import {
   MDBBtn,
   MDBModal,
@@ -18,10 +18,10 @@ import {
   MDBModalBody,
   MDBCheckbox,
 } from "mdb-react-ui-kit";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+  import InputLabel from "@mui/material/InputLabel";
+  import MenuItem from "@mui/material/MenuItem";
+  import FormControl from "@mui/material/FormControl";
+  import Select from "@mui/material/Select";
 const Modal = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -171,9 +171,9 @@ const Modal = (props) => {
         setShow={setTopRightModal}
       >
         <MDBModalDialog position="top-right" side>
-          <MDBModalContent>
+          <MDBModalContent className="modal_content">
             <MDBModalHeader className="bg-info text-white">
-              <MDBModalTitle>Add Item In your Restuarant</MDBModalTitle>
+              <MDBModalTitle className="modal_title">Add Item In your Restuarant</MDBModalTitle>
               <MDBBtn
                 color="none"
                 className="btn-close btn-close-white"
@@ -201,6 +201,7 @@ const Modal = (props) => {
                         id="profile"
                         hidden
                         name="profile"
+                        className="modal_inpt"
                       />
                       {/* <button onClick={handleimage}>Upload</button> */}
                     </div>
@@ -213,7 +214,7 @@ const Modal = (props) => {
                       </label>
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-control modal_inpt"
                         id="exampleInputname1"
                         name="user"
                         readOnly
@@ -229,7 +230,7 @@ const Modal = (props) => {
                       </label>
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-control modal_inpt"
                         id="exampleInputname2"
                         name="name"
                         value={name}
@@ -241,24 +242,29 @@ const Modal = (props) => {
 
                     <div class="mb-3">
                       <FormControl
-                        variant="standard"
-                        sx={{ m: 1, minWidth: 120 }}
+                        style={{fontSize:"4rem"}}
+                        sx={{ m: 1, minWidth: 300 }}
+              
+                        className="modal_inpt"
                       >
-                        <InputLabel id="demo-simple-select-standard-label">
+                        <label id="demo-simple-select-standard-label"
+                        className="modal_inpt"
+                        >
                           Category
-                        </InputLabel>
+                        </label>
                         <Select
                           labelId="demo-simple-select-standard-label"
                           id="demo-simple-select-standard"
                           value={category}
                           onChange={handleChange}
                           label="Category"
+                          className="modal_inpt"
                         >
-                          <MenuItem value={"Pizza"}>Pizza</MenuItem>
-                          <MenuItem value={"Burger"}>Burger</MenuItem>
-                          <MenuItem value={"Subway"}>Subway</MenuItem>
-                          <MenuItem value={"Noodles"}>Noodles</MenuItem>
-                          <MenuItem value={"Garlic Bread"}>
+                          <MenuItem value={"Pizza"} className="modal_inpt" style={{fontSize:"2.5rem"}}>Pizza</MenuItem>
+                          <MenuItem value={"Burger"} className="modal_inpt" style={{fontSize:"2.5rem"}}>Burger</MenuItem>
+                          <MenuItem value={"Subway"} className="modal_inpt"  style={{fontSize:"2.5rem"}}>Subway</MenuItem>
+                          <MenuItem value={"Noodles"} className="modal_inpt"  style={{fontSize:"2.5rem"}}>Noodles</MenuItem>
+                          <MenuItem value={"Garlic Bread"} className="modal_inpt"  style={{fontSize:"2.5rem"}}>
                             Garlic Bread
                           </MenuItem>
                         </Select>
@@ -272,6 +278,7 @@ const Modal = (props) => {
                       id="flexCheckDefault"
                       label="vegetarian"
                       onChange={handlechange1}
+                      className="modal_check"
                     />
 
                     <MDBCheckbox
@@ -280,19 +287,20 @@ const Modal = (props) => {
                       id="flexCheckDefault"
                       label="Non vegetarian"
                       onChange={handlechange2}
+                      className="modal_check"
                     />
                     {/* price */}
 
                     <div class="mb-3">
                       <label
                         htmlFor="exampleInputphone1"
-                        className="form-label"
+                        className="form-label modal_inpt"
                       >
                         Price
                       </label>
                       <input
                         type="number"
-                        className="form-control"
+                        className="form-control modal_inpt"
                         id="exampleInputphone1"
                         name="price"
                         value={price}

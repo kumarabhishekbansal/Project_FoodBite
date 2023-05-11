@@ -66,6 +66,7 @@ const addcashbackpoints=async(pointdata)=>{
         return Promise.reject(response.data.message);
     }else if(response.data && response.status===200){
         // localStorage.removeItem('cashbackpoints');
+
         return Promise.resolve(response.data);
     }
     return response.data;
@@ -73,13 +74,17 @@ const addcashbackpoints=async(pointdata)=>{
 
 
 const getuser=async(id)=>{
+    console.log("enter get user auth service");
     const data={id:id};
+    console.log("Data is ",data);
     const response=await axios.post(API_URL+'getuser',data);
     console.log("response is : ",response);
     if(response.status!==200)
     {
         return Promise.reject(response.data.message);
     }else if(response.data && response.status===200){
+        localStorage.removeItem('customer');
+        localStorage.setItem('customer',JSON.stringify(response.data));
         return Promise.resolve(response.data);
     }
     return response.data;

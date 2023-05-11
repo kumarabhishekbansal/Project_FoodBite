@@ -155,7 +155,7 @@ const Navigation = () => {
                         </MDBDropdownItem>
                         <MDBDropdownItem link className="navitemd">
                           {" "}
-                          <Link>Wallet</Link>{" "}
+                          <Link to="/cart">Cart</Link>{" "}
                         </MDBDropdownItem>
                         <MDBDropdownItem link className="navitemd">
                           <Link onClick={onLogout}>Logout</Link>{" "}
