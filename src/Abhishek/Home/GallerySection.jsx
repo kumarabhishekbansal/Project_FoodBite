@@ -22,23 +22,23 @@ const GallerySection = () => {
           </div>
           <div className="box" data-aos="fade-up">
             <img src={img2} alt="" />
-            <h3>delicious food</h3>
+            <h3>tasteful food</h3>
           </div>
           <div className="box" data-aos="fade-up">
             <img src={img3} alt="" />
-            <h3>delicious food</h3>
+            <h3>flavorful food</h3>
           </div>
           <div className="box" data-aos="fade-up">
             <img src={img4} alt="" />
-            <h3>delicious food</h3>
+            <h3>edible food</h3>
           </div>
           <div className="box" data-aos="fade-up">
             <img src={img5} alt="" />
-            <h3>delicious food</h3>
+            <h3>spicy food</h3>
           </div>
           <div className="box" data-aos="fade-up">
             <img src={img6} alt="" />
-            <h3>delicious food</h3>
+            <h3>sweet food</h3>
           </div>
         </div>
       </section>
