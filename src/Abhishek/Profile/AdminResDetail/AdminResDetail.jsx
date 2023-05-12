@@ -42,7 +42,7 @@ const AdminResDetail = () => {
                 </figure> */}
             </div>
             <div className="other_info">
-            {usedval.isvacancies?(<h3 className="text-warning p-4"> vacancies : Yes </h3>):(<h3 className="text-danger"> vacancies : No </h3>)}  
+            {usedval.isvacancies?(<h3 className="text-white p-4"> vacancies : Yes </h3>):(<h3 className="text-white"> vacancies : No </h3>)}  
             {user.isAdmin?(<>
 
             </>):(<>
