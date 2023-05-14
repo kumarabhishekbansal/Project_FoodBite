@@ -28,11 +28,11 @@ h1, h3{
 
 html{
     font-size: 62.5%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body{
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* height:200rem; */
 }
 
@@ -163,7 +163,7 @@ header #menu-bar{
 }
 
 .home .image{
-    flex:1 1 39rem;
+    flex:1 1 30rem;
 }
 
 .home .image img{

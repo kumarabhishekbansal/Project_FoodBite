@@ -68,13 +68,14 @@ const ContactUs = () => {
       const response = await axios.post(API_URL + "addmessage", data);
       if (response.data.message && response.status === 200) {
         toast.success(response.data.message);
-        setmsgdata({
+        setmsgdata({...msgdata,
           username: "",
           useremail: "",
           usersubject: "",
           usermessage: "",
         });
-        console.log(response.data.message);
+        console.log(msgdata);
+        // window.location.reload(false);
       } else if (response.data.message && response.status !== 200) {
         toast.error(response.data.message);
         console.log(response.data.message);

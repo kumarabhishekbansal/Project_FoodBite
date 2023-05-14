@@ -64,16 +64,23 @@ const Dashboard = () => {
     if(queryParams.session_id && user)
     {
         const API_URL='/api/cart/'
-        const data={cart:cart,userId:user._id}
+        const actualpoint=user.cashbackpoints;
+        console.log("user actual point ",user.cashbackpoints);
+        console.log("Actual point ",actualpoint);
+        const amountoff=JSON.parse(localStorage.getItem('cashbackpoints'));
+        const removepoint=JSON.parse(localStorage.getItem('cashbackpoints'))*5;
+       console.log("removepoint ",removepoint);
+
+        const data={cart:cart,userId:user._id,amountoff:amountoff}
         const response=await axios.post(API_URL+'addcartitems',data);
         console.log(response);
         dispatch(cartreset());
         const addpoint=25;
-        const actualpoint=user.cashbackpoints;
-        console.log("user actual point ",user.cashbackpoints);
-        console.log("Actual point ",actualpoint);
-        const removepoint=JSON.parse(localStorage.getItem('cashbackpoints'))*5;
-       console.log("removepoint ",removepoint);
+      //   const actualpoint=user.cashbackpoints;
+      //   console.log("user actual point ",user.cashbackpoints);
+      //   console.log("Actual point ",actualpoint);
+      //   const removepoint=JSON.parse(localStorage.getItem('cashbackpoints'))*5;
+      //  console.log("removepoint ",removepoint);
         const pointdata={
           userId:user._id,
           points:actualpoint+addpoint-removepoint

@@ -18,6 +18,7 @@ import AdminResDetail from "./Abhishek/Profile/AdminResDetail/AdminResDetail";
 import ViewClientRes from "./Abhishek/Profile/AddRestuarant/ViewClientRes";
 import Cart from "./Abhishek/Profile/ViewMenuRes/Cart";
 import PreviousOrder from "./Anmol/OrderList/PreviousOrder";
+import ResOrders from "./Abhishek/AdminRestuarant/ResOrders";
 const App = () => {
   return (
     <>
@@ -33,7 +34,7 @@ const App = () => {
         <Route exact path="/viewres" element={<ViewClientRes />}/>
         <Route exact path="/cart" element={<Cart />}/>
         <Route exact path="/historyorders" element={<PreviousOrder />}/>
-      
+        <Route exact path="/ResOrder/:val" element={<ResOrders />}/>
       </Routes>
       <Footers />
       <Bnavbar />

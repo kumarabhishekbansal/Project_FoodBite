@@ -5,6 +5,7 @@ import AddResModalReducer from '../Reducers/Modal/AddResModalSlice'
 import ItemReducer from '../Reducers/Items/ItemSlice'
 import CartReducer from "../Reducers/Cart/CartSlice"
 import OrderReducer from "../Reducers/orders/OrderSlice"
+import ResOrderReducer from '../Reducers/ResOrder/ResOrderSlice'
 export const store = configureStore({
   reducer: {
     auth: AuthReducer,
@@ -13,6 +14,7 @@ export const store = configureStore({
     itemreducer:ItemReducer,
     cart:CartReducer,
     orders:OrderReducer,
+    ResOrderDetails:ResOrderReducer,
     // [PaymentService.reducerPath]: PaymentService.reducer,
   },
   // middleware: (getDefaultMiddleware) =>
